@@ -241,9 +241,9 @@ namespace dataset
             // 
             this.Add.Location = new System.Drawing.Point(28, 481);
             this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(60, 23);
+            this.Add.Size = new System.Drawing.Size(77, 23);
             this.Add.TabIndex = 19;
-            this.Add.Text = "Add";
+            this.Add.Text = "Добавить";
             this.Add.UseVisualStyleBackColor = true;
             this.Add.Click += new System.EventHandler(this.Add_Click);
             // 
@@ -251,19 +251,19 @@ namespace dataset
             // 
             this.Update.Location = new System.Drawing.Point(111, 481);
             this.Update.Name = "Update";
-            this.Update.Size = new System.Drawing.Size(70, 23);
+            this.Update.Size = new System.Drawing.Size(83, 23);
             this.Update.TabIndex = 20;
-            this.Update.Text = "Update";
+            this.Update.Text = "Обновить";
             this.Update.UseVisualStyleBackColor = true;
             this.Update.Click += new System.EventHandler(this.Update_Click);
             // 
             // Delete
             // 
-            this.Delete.Location = new System.Drawing.Point(205, 481);
+            this.Delete.Location = new System.Drawing.Point(200, 481);
             this.Delete.Name = "Delete";
-            this.Delete.Size = new System.Drawing.Size(60, 23);
+            this.Delete.Size = new System.Drawing.Size(76, 23);
             this.Delete.TabIndex = 21;
-            this.Delete.Text = "Delete";
+            this.Delete.Text = "Удалить";
             this.Delete.UseVisualStyleBackColor = true;
             this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 

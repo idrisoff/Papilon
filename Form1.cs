@@ -19,6 +19,7 @@ namespace dataset
         }
         DataTable table = new DataTable();
         int selectedRow;
+        bool x = false;
 
         private void LoadImage_Click(object sender, EventArgs e)
         {
@@ -59,13 +60,21 @@ namespace dataset
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             selectedRow = e.RowIndex;
-            DataGridViewRow row = dataGridView1.Rows[selectedRow];
-            textBoxLastName.Text = row.Cells[0].Value.ToString();
-            textBoxName.Text = row.Cells[1].Value.ToString();
-            textBoxFather.Text = row.Cells[2].Value.ToString();
-            textBoxPhone.Text = row.Cells[3].Value.ToString();
-            textBoxAdress.Text = row.Cells[4].Value.ToString();
-            textBoxBirthday.Text = row.Cells[5].Value.ToString();
+            try
+            {
+                DataGridViewRow row = dataGridView1.Rows[selectedRow];
+                textBoxLastName.Text = row.Cells[0].Value.ToString();
+                textBoxName.Text = row.Cells[1].Value.ToString();
+                textBoxFather.Text = row.Cells[2].Value.ToString();
+                textBoxPhone.Text = row.Cells[3].Value.ToString();
+                textBoxAdress.Text = row.Cells[4].Value.ToString();
+                textBoxBirthday.Text = row.Cells[5].Value.ToString();
+            }
+            catch (Exception)
+            {
+                dataGridView1.Sort(dataGridView1.Columns[e.ColumnIndex], x ? ListSortDirection.Ascending : ListSortDirection.Descending);
+                x = !x;
+            }
         }
 
         private void Update_Click(object sender, EventArgs e)
